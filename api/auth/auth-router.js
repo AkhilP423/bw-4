@@ -2,6 +2,7 @@ const bcrypt = require("bcryptjs");
 const makeToken = require("./auth-token-builder");
 const User = require("../users/users-model");
 const router = require("express").Router();
+
 const { BCRYPT_ROUNDS } = require("../secrets/index");
 
 const {validateUserId} = require('../auth/auth-middleware')

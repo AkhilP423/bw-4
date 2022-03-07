@@ -7,7 +7,6 @@ const authRouter = require('./auth/auth-router')
 const itemsRouter = require('../api/items/items-router')
 const res = require('express/lib/response')
 
-
 server.use(express.json())
 server.use(helmet())
 server.use(cors())
@@ -19,7 +18,6 @@ server.use('*', () => {
   console.log('not found')
   res.json({message: 'hitting nothing'})
 })
-
 
 server.use((err, req, res, next) => { // eslint-disable-line
   res.status(err.status || 500).json({
